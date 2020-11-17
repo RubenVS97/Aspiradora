@@ -20,6 +20,7 @@ public class Aspiradora {
         //Inicializamos las variables 
         boolean repetir = true;
         boolean salirBucle = true;
+        boolean salirBucle2 = true;
         boolean cocinaSucio = true;
         boolean salonSucio = true;
         boolean habitacion1Sucio = true;
@@ -30,13 +31,9 @@ public class Aspiradora {
         double metrosCocina, metrosSalon, metrosHabitacion1, metrosHabitacion2, metrosBanio;
         final double PORCENTAJEGASTADONORMAL = 1.5;
         final double PORCENTAJEGASTADOFREGADO = 2.25;
-        String salir = "si";
         String resultado;
         final String usuario = "usuario";
         final String contraseña = "contraseña";
-        int modoDependencia1;
-        String sMododependenci;
-        String sMododependencia1;
         String sitio = " base de carga";
         //Bucle para que introduzca la contraseña
 
@@ -272,8 +269,10 @@ public class Aspiradora {
                                         sitio = " el baño";
                                         JOptionPane.showMessageDialog(null, "Después de limpiar tiene:" + bateria + "%");
                                     }
+                                }else{
+                                    JOptionPane.showMessageDialog(null, "El baño está limpio ");
                                 }
-                                JOptionPane.showMessageDialog(null, "El baño está limpio ");
+                                
                                 break;
                             case 6:
                                 JOptionPane.showMessageDialog(null, "Ha seleccionado salir");
@@ -385,10 +384,10 @@ public class Aspiradora {
                                 break;
                             case 6:
                                 JOptionPane.showMessageDialog(null, "Ha seleccionado salir");
-                                salirBucle = false;
+                                salirBucle2 = false;
                                 break;
                         }
-                    } while (salirBucle);
+                    } while (salirBucle2);
                     break;
                 case 4:
                     //Este es el switch del estado general de la aspiradora
